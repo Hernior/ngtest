@@ -16,7 +16,7 @@ const mockData = {
       src: ''
     },
   ]
-}
+};
 
 describe(PhotoBoardService.name, () => {
   let service: PhotoBoardService;
@@ -31,6 +31,8 @@ describe(PhotoBoardService.name, () => {
     service = TestBed.inject(PhotoBoardService);
     httpController = TestBed.inject(HttpTestingController);
   });
+
+  afterEach(() => httpController.verify());
 
   it(`#${PhotoBoardService.prototype.getPhotos.name} should return photos with description in uppercase`, done => {
     service.getPhotos().subscribe(photos => {
