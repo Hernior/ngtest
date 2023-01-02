@@ -1,0 +1,7 @@
+.like-widget-container {
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: rgba(0, 150, 150, 0.8);
+  }
+}
